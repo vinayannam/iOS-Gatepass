@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Parents" representedClassName="Parents" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentuser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parentOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Students" inverseName="studentOf" inverseEntity="Students" syncable="YES"/>
+    </entity>
+    <entity name="Passes" representedClassName="Passes" syncable="YES" codeGenerationType="class">
+        <attribute name="checkDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="from_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="from_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="home" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="p_request" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reason" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="s_request" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="to_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w_request" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Students" representedClassName="Students" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="parentuser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="studentOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Parents" inverseName="parentOf" inverseEntity="Parents" syncable="YES"/>
+    </entity>
+    <entity name="Warden" representedClassName="Warden" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Parents" positionX="-2115" positionY="-477" width="128" height="120"/>
+        <element name="Passes" positionX="-2673" positionY="-360" width="128" height="270"/>
+        <element name="Students" positionX="-2511" positionY="-469" width="128" height="118"/>
+        <element name="Warden" positionX="-2394" positionY="-279" width="128" height="88"/>
+    </elements>
+</model>
